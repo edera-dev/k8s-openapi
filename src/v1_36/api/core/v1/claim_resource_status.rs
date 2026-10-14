@@ -4,6 +4,10 @@ crate::string_enum! {
     /// When a controller receives persistentvolume claim update with ClaimResourceStatus for a resource
     /// that it does not recognizes, then it should ignore that update and let other controllers
     /// handle it.
+    ///
+    /// Used by:
+    ///
+    /// - [`PersistentVolumeClaimStatus::allocated_resource_statuses`](crate::api::core::v1::PersistentVolumeClaimStatus::allocated_resource_statuses)
     pub enum ClaimResourceStatus {
         /// State set when resize controller starts resizing the volume in control-plane.
         ControllerResizeInProgress = "ControllerResizeInProgress",

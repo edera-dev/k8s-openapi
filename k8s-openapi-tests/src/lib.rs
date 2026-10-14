@@ -508,6 +508,8 @@ mod special_idents;
 
 mod string_enum;
 
+mod table;
+
 mod time;
 
 mod watch_event;

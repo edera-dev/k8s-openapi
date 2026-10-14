@@ -36,14 +36,14 @@ impl SupportedVersion {
         }
     }
 
-    /// The base URL of the Go source of the `k8s.io/api` module, at the same tag as [`Self::spec_url`].
-    pub(crate) fn api_source_url(self) -> &'static str {
+    /// The base URL of the Go source of the `k8s.io/*` modules, at the same tag as [`Self::spec_url`].
+    pub(crate) fn go_source_url(self) -> &'static str {
         match self {
-            SupportedVersion::V1_33 => "https://raw.githubusercontent.com/kubernetes/kubernetes/v1.33.13/staging/src/k8s.io/api",
-            SupportedVersion::V1_34 => "https://raw.githubusercontent.com/kubernetes/kubernetes/v1.34.12/staging/src/k8s.io/api",
-            SupportedVersion::V1_35 => "https://raw.githubusercontent.com/kubernetes/kubernetes/v1.35.9/staging/src/k8s.io/api",
-            SupportedVersion::V1_36 => "https://raw.githubusercontent.com/kubernetes/kubernetes/v1.36.5/staging/src/k8s.io/api",
-            SupportedVersion::V1_37 => "https://raw.githubusercontent.com/kubernetes/kubernetes/v1.37.1/staging/src/k8s.io/api",
+            SupportedVersion::V1_33 => "https://raw.githubusercontent.com/kubernetes/kubernetes/v1.33.13/staging/src/k8s.io",
+            SupportedVersion::V1_34 => "https://raw.githubusercontent.com/kubernetes/kubernetes/v1.34.12/staging/src/k8s.io",
+            SupportedVersion::V1_35 => "https://raw.githubusercontent.com/kubernetes/kubernetes/v1.35.9/staging/src/k8s.io",
+            SupportedVersion::V1_36 => "https://raw.githubusercontent.com/kubernetes/kubernetes/v1.36.5/staging/src/k8s.io",
+            SupportedVersion::V1_37 => "https://raw.githubusercontent.com/kubernetes/kubernetes/v1.37.1/staging/src/k8s.io",
         }
     }
 

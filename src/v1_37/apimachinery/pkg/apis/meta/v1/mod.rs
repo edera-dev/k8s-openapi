@@ -53,6 +53,9 @@ pub use self::object_meta::ObjectMeta;
 mod owner_reference;
 pub use self::owner_reference::OwnerReference;
 
+mod partial_object_metadata;
+pub use self::partial_object_metadata::PartialObjectMetadata;
+
 mod patch;
 pub use self::patch::Patch;
 
@@ -74,8 +77,29 @@ pub use self::status_cause::StatusCause;
 mod status_details;
 pub use self::status_details::StatusDetails;
 
+mod table;
+pub use self::table::Table;
+
+mod table_column_definition;
+pub use self::table_column_definition::TableColumnDefinition;
+
+mod table_row;
+pub use self::table_row::TableRow;
+
+mod table_row_condition;
+pub use self::table_row_condition::TableRowCondition;
+
 mod time;
 pub use self::time::Time;
 
 mod watch_event;
 pub use self::watch_event::WatchEvent;
+
+mod condition_status;
+pub use self::condition_status::ConditionStatus;
+
+mod include_object_policy;
+pub use self::include_object_policy::IncludeObjectPolicy;
+
+mod row_condition_type;
+pub use self::row_condition_type::RowConditionType;

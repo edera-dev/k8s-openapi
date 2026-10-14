@@ -1,6 +1,8 @@
 #![deny(rust_2018_idioms, warnings)]
 
 mod fixups;
+mod go_source;
+mod go_structs;
 mod logger;
 mod string_enums;
 mod supported_version;
@@ -210,7 +212,7 @@ async fn run(
         }
     };
 
-    let go_sources = string_enums::fetch_go_sources(&spec.definitions, supported_version.api_source_url(), client).await?;
+    let go_sources = go_source::fetch(&spec.definitions, supported_version.go_source_url(), client).await?;
 
     tokio::task::spawn_blocking(move || -> Result<(), Error> {
         {
@@ -220,6 +222,12 @@ async fn run(
 
         log::info!("Applying fixups...");
         supported_version.fixup(&mut spec)?;
+
+        let go_packages = go_source::parse(&go_sources)?;
+
+        log::info!("Adding definitions from Go source...");
+        let num_added_definitions = go_structs::add_definitions(&mut spec, &go_packages)?;
+        log::info!("OK. Added {num_added_definitions} definitions");
 
         let expected_num_generated_types: usize = spec.definitions.len();
 
@@ -278,7 +286,7 @@ async fn run(
         }
 
         log::info!("Generating string enums...");
-        let num_generated_string_enums = string_enums::generate(&spec.definitions, &go_sources, &out_dir)?;
+        let num_generated_string_enums = string_enums::generate(&spec.definitions, &go_packages, &out_dir)?;
         log::info!("OK. Generated {num_generated_string_enums} string enums");
 
         log::info!("");

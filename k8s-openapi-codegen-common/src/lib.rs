@@ -381,6 +381,10 @@ pub fn run(
                     namespace_or_cluster_scoped_url_path_segment_and_scope.push((r#""""#.to_owned(), format!("{local}ClusterResourceScope"))),
                 "io.k8s.apimachinery.pkg.apis.meta.v1.Status" =>
                     subresource_url_path_segment_and_scope.push((r#""status""#.to_owned(), format!("{local}SubResourceScope"))),
+                // Not part of the upstream spec, and not served at any URL. It is returned in place of a list
+                // when the client requests it via the `Accept` header, regardless of the scope of the listed resource.
+                "io.k8s.apimachinery.pkg.apis.meta.v1.Table" =>
+                    subresource_url_path_segment_and_scope.push((r#""""#.to_owned(), format!("{local}SubResourceScope"))),
                 _ => (),
             }
 
