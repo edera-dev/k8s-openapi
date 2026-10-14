@@ -607,3 +607,138 @@ pub use self::windows_security_context_options::WindowsSecurityContextOptions;
 
 mod workload_reference;
 pub use self::workload_reference::WorkloadReference;
+
+mod app_armor_profile_type;
+pub use self::app_armor_profile_type::AppArmorProfileType;
+
+mod azure_data_disk_caching_mode;
+pub use self::azure_data_disk_caching_mode::AzureDataDiskCachingMode;
+
+mod azure_data_disk_kind;
+pub use self::azure_data_disk_kind::AzureDataDiskKind;
+
+mod claim_resource_status;
+pub use self::claim_resource_status::ClaimResourceStatus;
+
+mod condition_status;
+pub use self::condition_status::ConditionStatus;
+
+mod dns_policy;
+pub use self::dns_policy::DNSPolicy;
+
+mod host_path_type;
+pub use self::host_path_type::HostPathType;
+
+mod ip_family;
+pub use self::ip_family::IPFamily;
+
+mod ip_family_policy;
+pub use self::ip_family_policy::IPFamilyPolicy;
+
+mod mount_propagation_mode;
+pub use self::mount_propagation_mode::MountPropagationMode;
+
+mod namespace_phase;
+pub use self::namespace_phase::NamespacePhase;
+
+mod node_inclusion_policy;
+pub use self::node_inclusion_policy::NodeInclusionPolicy;
+
+mod node_phase;
+pub use self::node_phase::NodePhase;
+
+mod node_selector_operator;
+pub use self::node_selector_operator::NodeSelectorOperator;
+
+mod persistent_volume_access_mode;
+pub use self::persistent_volume_access_mode::PersistentVolumeAccessMode;
+
+mod persistent_volume_claim_modify_volume_status;
+pub use self::persistent_volume_claim_modify_volume_status::PersistentVolumeClaimModifyVolumeStatus;
+
+mod persistent_volume_claim_phase;
+pub use self::persistent_volume_claim_phase::PersistentVolumeClaimPhase;
+
+mod persistent_volume_mode;
+pub use self::persistent_volume_mode::PersistentVolumeMode;
+
+mod persistent_volume_phase;
+pub use self::persistent_volume_phase::PersistentVolumePhase;
+
+mod persistent_volume_reclaim_policy;
+pub use self::persistent_volume_reclaim_policy::PersistentVolumeReclaimPolicy;
+
+mod pod_condition_type;
+pub use self::pod_condition_type::PodConditionType;
+
+mod pod_fs_group_change_policy;
+pub use self::pod_fs_group_change_policy::PodFSGroupChangePolicy;
+
+mod pod_phase;
+pub use self::pod_phase::PodPhase;
+
+mod pod_qos_class;
+pub use self::pod_qos_class::PodQOSClass;
+
+mod preemption_policy;
+pub use self::preemption_policy::PreemptionPolicy;
+
+mod proc_mount_type;
+pub use self::proc_mount_type::ProcMountType;
+
+mod protocol;
+pub use self::protocol::Protocol;
+
+mod pull_policy;
+pub use self::pull_policy::PullPolicy;
+
+mod resource_quota_scope;
+pub use self::resource_quota_scope::ResourceQuotaScope;
+
+mod restart_policy;
+pub use self::restart_policy::RestartPolicy;
+
+mod scope_selector_operator;
+pub use self::scope_selector_operator::ScopeSelectorOperator;
+
+mod seccomp_profile_type;
+pub use self::seccomp_profile_type::SeccompProfileType;
+
+mod service_affinity;
+pub use self::service_affinity::ServiceAffinity;
+
+mod service_external_traffic_policy;
+pub use self::service_external_traffic_policy::ServiceExternalTrafficPolicy;
+
+mod service_internal_traffic_policy;
+pub use self::service_internal_traffic_policy::ServiceInternalTrafficPolicy;
+
+mod service_type;
+pub use self::service_type::ServiceType;
+
+mod signal;
+pub use self::signal::Signal;
+
+mod supplemental_groups_policy;
+pub use self::supplemental_groups_policy::SupplementalGroupsPolicy;
+
+mod taint_effect;
+pub use self::taint_effect::TaintEffect;
+
+mod termination_message_policy;
+pub use self::termination_message_policy::TerminationMessagePolicy;
+
+mod toleration_operator;
+pub use self::toleration_operator::TolerationOperator;
+
+mod uri_scheme;
+pub use self::uri_scheme::URIScheme;
+
+mod unsatisfiable_constraint_action;
+pub use self::unsatisfiable_constraint_action::UnsatisfiableConstraintAction;
+
+pub use crate::api::core::v1::IPFamilyPolicy as IPFamilyPolicyType;
+
+pub use crate::api::core::v1::ServiceExternalTrafficPolicy as ServiceExternalTrafficPolicyType;
+
+pub use crate::api::core::v1::ServiceInternalTrafficPolicy as ServiceInternalTrafficPolicyType;

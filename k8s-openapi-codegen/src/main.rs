@@ -2,6 +2,7 @@
 
 mod fixups;
 mod logger;
+mod string_enums;
 mod supported_version;
 
 use futures_util::TryStreamExt;
@@ -209,6 +210,8 @@ async fn run(
         }
     };
 
+    let go_sources = string_enums::fetch_go_sources(&spec.definitions, supported_version.api_source_url(), client).await?;
+
     tokio::task::spawn_blocking(move || -> Result<(), Error> {
         {
             let thread_local_logger = logger::make_local_logger(supported_version.name());
@@ -273,6 +276,10 @@ async fn run(
         if num_generated_structs + num_generated_type_aliases != expected_num_generated_types {
             return Err("Did not generate or skip expected number of types".into());
         }
+
+        log::info!("Generating string enums...");
+        let num_generated_string_enums = string_enums::generate(&spec.definitions, &go_sources, &out_dir)?;
+        log::info!("OK. Generated {num_generated_string_enums} string enums");
 
         log::info!("");
 

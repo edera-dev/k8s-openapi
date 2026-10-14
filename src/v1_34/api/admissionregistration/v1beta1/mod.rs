@@ -37,3 +37,15 @@ pub use self::param_ref::ParamRef;
 
 mod variable;
 pub use self::variable::Variable;
+
+mod patch_type;
+pub use self::patch_type::PatchType;
+
+mod validation_action;
+pub use self::validation_action::ValidationAction;
+
+pub use crate::api::admissionregistration::v1::OperationType;
+
+pub use crate::api::admissionregistration::v1::ReinvocationPolicyType;
+
+pub use crate::api::admissionregistration::v1::ScopeType;

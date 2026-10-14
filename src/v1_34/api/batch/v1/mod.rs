@@ -43,3 +43,18 @@ pub use self::success_policy_rule::SuccessPolicyRule;
 
 mod uncounted_terminated_pods;
 pub use self::uncounted_terminated_pods::UncountedTerminatedPods;
+
+mod completion_mode;
+pub use self::completion_mode::CompletionMode;
+
+mod concurrency_policy;
+pub use self::concurrency_policy::ConcurrencyPolicy;
+
+mod pod_failure_policy_action;
+pub use self::pod_failure_policy_action::PodFailurePolicyAction;
+
+mod pod_failure_policy_on_exit_codes_operator;
+pub use self::pod_failure_policy_on_exit_codes_operator::PodFailurePolicyOnExitCodesOperator;
+
+mod pod_replacement_policy;
+pub use self::pod_replacement_policy::PodReplacementPolicy;

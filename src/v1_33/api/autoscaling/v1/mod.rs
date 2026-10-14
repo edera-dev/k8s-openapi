@@ -19,3 +19,6 @@ pub use self::scale_spec::ScaleSpec;
 
 mod scale_status;
 pub use self::scale_status::ScaleStatus;
+
+mod metric_source_type;
+pub use self::metric_source_type::MetricSourceType;

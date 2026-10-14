@@ -10,3 +10,6 @@ pub use self::certificate_signing_request_spec::CertificateSigningRequestSpec;
 
 mod certificate_signing_request_status;
 pub use self::certificate_signing_request_status::CertificateSigningRequestStatus;
+
+mod key_usage;
+pub use self::key_usage::KeyUsage;

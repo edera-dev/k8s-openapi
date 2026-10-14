@@ -124,3 +124,18 @@ pub use self::resource_slice::ResourceSlice;
 
 mod resource_slice_spec;
 pub use self::resource_slice_spec::ResourceSliceSpec;
+
+mod allocation_config_source;
+pub use self::allocation_config_source::AllocationConfigSource;
+
+mod device_allocation_mode;
+pub use self::device_allocation_mode::DeviceAllocationMode;
+
+mod device_taint_effect;
+pub use self::device_taint_effect::DeviceTaintEffect;
+
+mod device_toleration_operator;
+pub use self::device_toleration_operator::DeviceTolerationOperator;
+
+mod skip_node_operation;
+pub use self::skip_node_operation::SkipNodeOperation;

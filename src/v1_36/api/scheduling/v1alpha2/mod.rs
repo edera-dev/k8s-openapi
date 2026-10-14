@@ -46,3 +46,6 @@ pub use self::workload_pod_group_template_reference::WorkloadPodGroupTemplateRef
 
 mod workload_spec;
 pub use self::workload_spec::WorkloadSpec;
+
+mod disruption_mode;
+pub use self::disruption_mode::DisruptionMode;

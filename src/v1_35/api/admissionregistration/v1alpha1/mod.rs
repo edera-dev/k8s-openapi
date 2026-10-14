@@ -37,3 +37,24 @@ pub use self::param_ref::ParamRef;
 
 mod variable;
 pub use self::variable::Variable;
+
+mod failure_policy_type;
+pub use self::failure_policy_type::FailurePolicyType;
+
+mod match_policy_type;
+pub use self::match_policy_type::MatchPolicyType;
+
+mod parameter_not_found_action_type;
+pub use self::parameter_not_found_action_type::ParameterNotFoundActionType;
+
+mod patch_type;
+pub use self::patch_type::PatchType;
+
+mod validation_action;
+pub use self::validation_action::ValidationAction;
+
+pub use crate::api::admissionregistration::v1::OperationType;
+
+pub use crate::api::admissionregistration::v1::ReinvocationPolicyType;
+
+pub use crate::api::admissionregistration::v1::ScopeType;

@@ -34,3 +34,6 @@ pub use self::shareable_capacity_status::ShareableCapacityStatus;
 
 mod shareable_summary_status;
 pub use self::shareable_summary_status::ShareableSummaryStatus;
+
+mod device_taint_effect;
+pub use self::device_taint_effect::DeviceTaintEffect;

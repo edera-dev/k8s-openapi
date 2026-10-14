@@ -1081,7 +1081,10 @@ fn evaluate_trait_bound(
     )
 }
 
-fn get_comment_text<'a>(s: &'a str, indent: &'a str) -> impl Iterator<Item = std::borrow::Cow<'static, str>> + 'a {
+/// Converts the given text into lines suitable for a doc comment, escaping characters that rustdoc would otherwise interpret.
+///
+/// Each line is prefixed with `indent` and a space.
+pub fn get_comment_text<'a>(s: &'a str, indent: &'a str) -> impl Iterator<Item = std::borrow::Cow<'static, str>> + 'a {
     s.lines().scan(true, move |previous_line_was_empty, line|
         if line.is_empty() {
             *previous_line_was_empty = true;

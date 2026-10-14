@@ -16,3 +16,6 @@ pub use self::device_taint_rule_spec::DeviceTaintRuleSpec;
 
 mod device_taint_selector;
 pub use self::device_taint_selector::DeviceTaintSelector;
+
+mod device_taint_effect;
+pub use self::device_taint_effect::DeviceTaintEffect;

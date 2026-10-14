@@ -40,3 +40,6 @@ pub use self::volume_error::VolumeError;
 
 mod volume_node_resources;
 pub use self::volume_node_resources::VolumeNodeResources;
+
+mod volume_binding_mode;
+pub use self::volume_binding_mode::VolumeBindingMode;

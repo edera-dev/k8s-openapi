@@ -25,3 +25,6 @@ pub use self::resource_pool_status_request_spec::ResourcePoolStatusRequestSpec;
 
 mod resource_pool_status_request_status;
 pub use self::resource_pool_status_request_status::ResourcePoolStatusRequestStatus;
+
+mod device_taint_effect;
+pub use self::device_taint_effect::DeviceTaintEffect;

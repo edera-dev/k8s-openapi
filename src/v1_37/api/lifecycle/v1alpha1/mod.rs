@@ -37,3 +37,12 @@ pub use self::responder_status::ResponderStatus;
 
 mod target_responder;
 pub use self::target_responder::TargetResponder;
+
+mod eviction_request_intent;
+pub use self::eviction_request_intent::EvictionRequestIntent;
+
+mod requester_intent;
+pub use self::requester_intent::RequesterIntent;
+
+mod responder_state_type;
+pub use self::responder_state_type::ResponderStateType;

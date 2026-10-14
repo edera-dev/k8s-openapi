@@ -73,3 +73,15 @@ pub use self::stateful_set_status::StatefulSetStatus;
 
 mod stateful_set_update_strategy;
 pub use self::stateful_set_update_strategy::StatefulSetUpdateStrategy;
+
+mod daemon_set_update_strategy_type;
+pub use self::daemon_set_update_strategy_type::DaemonSetUpdateStrategyType;
+
+mod deployment_strategy_type;
+pub use self::deployment_strategy_type::DeploymentStrategyType;
+
+mod pod_management_policy_type;
+pub use self::pod_management_policy_type::PodManagementPolicyType;
+
+mod stateful_set_update_strategy_type;
+pub use self::stateful_set_update_strategy_type::StatefulSetUpdateStrategyType;

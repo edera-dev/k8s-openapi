@@ -85,3 +85,9 @@ pub use self::service_cidr_spec::ServiceCIDRSpec;
 
 mod service_cidr_status;
 pub use self::service_cidr_status::ServiceCIDRStatus;
+
+mod path_type;
+pub use self::path_type::PathType;
+
+mod policy_type;
+pub use self::policy_type::PolicyType;

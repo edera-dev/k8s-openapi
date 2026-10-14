@@ -251,6 +251,11 @@ pub use _resource::{
     api_version, group, kind, version,
 };
 
+#[path = "string_enum.rs"]
+mod _string_enum;
+pub use _string_enum::UnknownStringEnumValue;
+use _string_enum::string_enum;
+
 #[cfg(k8s_openapi_enabled_version="1.33")] mod v1_33;
 #[cfg(k8s_openapi_enabled_version="1.33")] pub use self::v1_33::*;
 

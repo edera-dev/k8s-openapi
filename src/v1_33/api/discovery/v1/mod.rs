@@ -19,3 +19,6 @@ pub use self::for_node::ForNode;
 
 mod for_zone;
 pub use self::for_zone::ForZone;
+
+mod address_type;
+pub use self::address_type::AddressType;

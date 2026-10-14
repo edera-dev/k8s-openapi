@@ -85,3 +85,27 @@ pub use self::variable::Variable;
 
 mod webhook_client_config;
 pub use self::webhook_client_config::WebhookClientConfig;
+
+mod failure_policy_type;
+pub use self::failure_policy_type::FailurePolicyType;
+
+mod match_policy_type;
+pub use self::match_policy_type::MatchPolicyType;
+
+mod operation_type;
+pub use self::operation_type::OperationType;
+
+mod patch_type;
+pub use self::patch_type::PatchType;
+
+mod reinvocation_policy_type;
+pub use self::reinvocation_policy_type::ReinvocationPolicyType;
+
+mod scope_type;
+pub use self::scope_type::ScopeType;
+
+mod side_effect_class;
+pub use self::side_effect_class::SideEffectClass;
+
+mod validation_action;
+pub use self::validation_action::ValidationAction;

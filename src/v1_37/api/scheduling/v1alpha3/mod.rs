@@ -109,3 +109,6 @@ pub use self::workload_reference::WorkloadReference;
 
 mod workload_spec;
 pub use self::workload_spec::WorkloadSpec;
+
+mod preemption_policy;
+pub use self::preemption_policy::PreemptionPolicy;

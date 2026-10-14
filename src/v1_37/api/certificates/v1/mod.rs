@@ -25,3 +25,6 @@ pub use self::pod_certificate_request_spec::PodCertificateRequestSpec;
 
 mod pod_certificate_request_status;
 pub use self::pod_certificate_request_status::PodCertificateRequestStatus;
+
+mod key_usage;
+pub use self::key_usage::KeyUsage;

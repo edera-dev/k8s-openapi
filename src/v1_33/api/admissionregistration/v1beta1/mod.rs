@@ -43,3 +43,10 @@ pub use self::validation::Validation;
 
 mod variable;
 pub use self::variable::Variable;
+
+mod validation_action;
+pub use self::validation_action::ValidationAction;
+
+pub use crate::api::admissionregistration::v1::OperationType;
+
+pub use crate::api::admissionregistration::v1::ScopeType;

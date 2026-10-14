@@ -506,6 +506,8 @@ mod resource;
 
 mod special_idents;
 
+mod string_enum;
+
 mod time;
 
 mod watch_event;
